@@ -15,7 +15,7 @@ const app=express()
 
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:5173'  // Replace with your frontend URL
+    origin: 'https://luxury-crostata-994474.netlify.app/'  // Replace with your frontend URL
 }));
 
 
@@ -39,3 +39,5 @@ app.listen(PORT,()=>{
 
 
 // Narasimha30
+
+//  origin: 'http://localhost:5173'
