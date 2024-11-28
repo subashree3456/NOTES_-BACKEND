@@ -15,7 +15,7 @@ const app=express()
 
 app.use(cors({
     credentials: true,
-    origin: 'https://luxury-crostata-994474.netlify.app/'  // Replace with your frontend URL
+    origin: 'https://luxury-crostata-994474.netlify.app'  //  frontend URL
 }));
 
 
