@@ -47,9 +47,8 @@ const Login=async(req,res)=>{
         
            const token= await jwt.sign({userId:FindUser._id},process.env.SecreateKey,{expiresIn:"3d"})
            res.cookie("token",token,{
-            HttpOnly : true,
-            secure:true, // turn it when you're in deployment
-            SameSite : None, // turn it into false when you're in production(deployment)
+            httpOnly:true,
+            secure:false,
             maxAge:3 * 24 * 3600 * 1000
            })
            res.status(200).json({success:true,message:"user login successfully",user:FindUser,token})
