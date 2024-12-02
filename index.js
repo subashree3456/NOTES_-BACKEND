@@ -41,3 +41,6 @@ app.listen(PORT,()=>{
 // Narasimha30
 
 //  origin: 'http://localhost:5173'
+
+
+//  origin: 'https://papaya-malabi-99d6d4.netlify.app'
