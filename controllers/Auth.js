@@ -49,7 +49,7 @@ const Login=async(req,res)=>{
            res.cookie("token",token,{
             HttpOnly : true,
             Secure:true,
-            SameSite:None,
+            SameSite:"None",
             maxAge:3 * 24 * 3600 * 1000
            })
            res.status(200).json({success:true,message:"user login successfully",user:FindUser,token})
