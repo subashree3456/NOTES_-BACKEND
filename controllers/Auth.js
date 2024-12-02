@@ -57,7 +57,7 @@ const Login=async(req,res)=>{
           return res
             .status(200)
             .cookie("token", token, cookieOptions)
-            .json({ message: "User login successful..." ,user:FindUser,token});
+            .json({ success:true, message: "User login successful..." ,user:FindUser,token});
 
       // res.status(200).json({success:true,message:"user login successfully",user:FindUser,token})
 
