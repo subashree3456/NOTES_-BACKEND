@@ -46,6 +46,7 @@ const Login=async(req,res)=>{
            }
         
            const token= await jwt.sign({userId:FindUser._id},process.env.SecreateKey,{expiresIn:"3d"})
+           
            const cookieOptions = {
             expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
             httpOnly: true,
@@ -55,9 +56,10 @@ const Login=async(req,res)=>{
           
           return res
             .status(200)
-            .cookie("token",token, cookieOptions)
-            .json({ message: "User login successful..." });
+            .cookie("token", token, cookieOptions)
+            .json({ message: "User login successful..." ,user:FindUser,token});
 
+      // res.status(200).json({success:true,message:"user login successfully",user:FindUser,token})
 
     } catch (error) {
         console.log(error)
